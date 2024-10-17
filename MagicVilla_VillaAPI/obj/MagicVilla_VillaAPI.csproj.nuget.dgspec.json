@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\programing video\\back end\\asp.net core\\API project\\RESTful Web API - The Complete Guide (.NET7 API)\\part 1\\course_7\\MagicVilla_API-master\\MagicVilla_API-master\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj": {}
+    "E:\\try_programming\\backend\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj": {}
   },
   "projects": {
-    "H:\\programing video\\back end\\asp.net core\\API project\\RESTful Web API - The Complete Guide (.NET7 API)\\part 1\\course_7\\MagicVilla_API-master\\MagicVilla_API-master\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj": {
+    "E:\\try_programming\\backend\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\programing video\\back end\\asp.net core\\API project\\RESTful Web API - The Complete Guide (.NET7 API)\\part 1\\course_7\\MagicVilla_API-master\\MagicVilla_API-master\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
+        "projectUniqueName": "E:\\try_programming\\backend\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
         "projectName": "MagicVilla_VillaAPI",
-        "projectPath": "H:\\programing video\\back end\\asp.net core\\API project\\RESTful Web API - The Complete Guide (.NET7 API)\\part 1\\course_7\\MagicVilla_API-master\\MagicVilla_API-master\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
+        "projectPath": "E:\\try_programming\\backend\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "H:\\programing video\\back end\\asp.net core\\API project\\RESTful Web API - The Complete Guide (.NET7 API)\\part 1\\course_7\\MagicVilla_API-master\\MagicVilla_API-master\\MagicVilla_VillaAPI\\obj\\",
+        "outputPath": "E:\\try_programming\\backend\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_VillaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mohamed\\AppData\\Roaming\\NuGet\\NuGet.Config",
