@@ -15,8 +15,8 @@ namespace MagicVilla_VillaAPI.Controllers.v1
 {
     [Route("api/v{version:apiVersion}/VillaNumberAPI")]
     [ApiController]
-    [ApiVersion("1.0"),Deprecated = true] //deprecated attribute for tell the client that this version is deprecated in response header
-
+    //[ApiVersion("1.0"),Deprecated = true] //deprecated attribute for tell the client that this version is deprecated in response header
+     [ApiVersion("1.0"), Obsolete("This version is deprecated. Please use a newer version.")] // i  Used Obsolete instead of Deprecated
     public class VillaNumberAPIController : ControllerBase
     {
         protected APIResponse _response;

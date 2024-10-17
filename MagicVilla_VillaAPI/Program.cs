@@ -73,6 +73,7 @@ builder.Services.AddVersionedApiExplorer(options =>
 {
     options.GroupNameFormat = "'v'VVV";
     options.SubstituteApiVersionInUrl = true;
+    //options.AssumeDefaultVersionWhenUnspecified = true;
 });
 
 //service for swagger including authentication and versioning
