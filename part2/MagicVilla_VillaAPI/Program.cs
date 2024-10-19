@@ -1,4 +1,3 @@
-
 using MagicVilla_VillaAPI;
 using MagicVilla_VillaAPI.Data;
 using MagicVilla_VillaAPI.Repository.IRepostiory;
@@ -19,6 +18,8 @@ using Microsoft.AspNetCore.Diagnostics;
 using Newtonsoft.Json;
 using MagicVilla_VillaAPI.Extensions;
 using MagicVilla_VillaAPI.Middlewares;
+using MagicVilla_VillaAPI.Migrations;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -105,6 +106,16 @@ else
 
 //app.HandleError(app.Environment.IsDevelopment());
 app.UseMiddleware<CustomExceptionMiddleware>();
+
+// use static files for images if you save images in static files 
+app.UseStaticFiles(new StaticFileOptions() {
+    //fileprovider= new physicalfileprovider("physicalfileprovider in your local machine "); 
+    //so we have aproblem with this because we work as a team and in git
+    // so all physical files will not be in the same path
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "images")), // image is a folder name in api project
+    RequestPath = "/images"
+});
+
 app.UseStaticFiles(); 
 app.UseHttpsRedirection();
 app.UseAuthentication();
