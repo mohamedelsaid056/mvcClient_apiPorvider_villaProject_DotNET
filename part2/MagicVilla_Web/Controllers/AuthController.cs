@@ -35,7 +35,7 @@ namespace MagicVilla_Web.Controllers
         {
             APIResponse response = await _authService.LoginAsync<APIResponse>(obj);
             if (response != null && response.IsSuccess)
-            { 
+            {
                 TokenDTO model = JsonConvert.DeserializeObject<TokenDTO>(Convert.ToString(response.Result));
 
                 var handler = new JwtSecurityTokenHandler();
@@ -43,13 +43,16 @@ namespace MagicVilla_Web.Controllers
 
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
                 identity.AddClaim(new Claim(ClaimTypes.Name, jwt.Claims.FirstOrDefault(u => u.Type == "unique_name").Value));
-                identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u=>u.Type=="role").Value));
+                identity.AddClaim(new Claim(ClaimTypes.Role, jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
                 var principal = new ClaimsPrincipal(identity);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
+                //store token as session 
+                //HttpContext.Session.SetString(SD.AccessToken, model.AccessToken);
 
+                // store token as cookies check itokenprovider interface in service 
                 _tokenProvider.SetToken(model);
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -79,7 +82,7 @@ namespace MagicVilla_Web.Controllers
             {
                 obj.Role = SD.Customer;
             }
-            APIResponse result =  await _authService.RegisterAsync<APIResponse>(obj);
+            APIResponse result = await _authService.RegisterAsync<APIResponse>(obj);
             if (result != null && result.IsSuccess)
             {
                 return RedirectToAction("Login");
@@ -99,8 +102,8 @@ namespace MagicVilla_Web.Controllers
             await HttpContext.SignOutAsync();
             var token = _tokenProvider.GetToken();
             await _authService.LogoutAsync<APIResponse>(token);
-                _tokenProvider.ClearToken();
-            return RedirectToAction("Index","Home");
+            _tokenProvider.ClearToken();
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult AccessDenied()

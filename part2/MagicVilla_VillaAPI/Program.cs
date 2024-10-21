@@ -24,7 +24,8 @@ using Microsoft.Extensions.FileProviders;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ApplicationDbContext>(option => {
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -34,7 +35,8 @@ builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 builder.Services.AddAutoMapper(typeof(MappingConfig));
-builder.Services.AddApiVersioning(options => {
+builder.Services.AddApiVersioning(options =>
+{
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ReportApiVersions = true;
@@ -53,22 +55,24 @@ builder.Services.AddAuthentication(x =>
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-    .AddJwtBearer(x => {
+    .AddJwtBearer(x =>
+    {
         x.RequireHttpsMetadata = false;
         x.SaveToken = true;
         x.TokenValidationParameters = new TokenValidationParameters
         {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
-                ValidateIssuer = true,
-                ValidIssuer= "https://magicvilla-api.com",
-                ValidAudience= "dotnetmastery.com",
-                ValidateAudience = true,
-                ClockSkew= TimeSpan.Zero,
-            };
-});
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+            ValidateIssuer = true,
+            ValidIssuer = "https://magicvilla-api.com",
+            ValidAudience = "dotnetmastery.com",
+            ValidateAudience = true,
+            ClockSkew = TimeSpan.Zero,
+        };
+    });
 
-builder.Services.AddControllers(option => {
+builder.Services.AddControllers(option =>
+{
     option.Filters.Add<CustomExceptionFilter>();
 }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters().
 ConfigureApiBehaviorOptions(option =>
@@ -88,17 +92,19 @@ app.UseSwagger();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwaggerUI(options => {
+    app.UseSwaggerUI(options =>
+    {
         options.SwaggerEndpoint("/swagger/v2/swagger.json", "Magic_VillaV2");
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "Magic_VillaV1");
     });
 }
 else
 {
-    app.UseSwaggerUI(options => {
+    app.UseSwaggerUI(options =>
+    {
         options.SwaggerEndpoint("/swagger/v2/swagger.json", "Magic_VillaV2");
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "Magic_VillaV1");
-        options.RoutePrefix =string.Empty;
+        options.RoutePrefix = string.Empty;
     });
 }
 
@@ -108,7 +114,8 @@ else
 app.UseMiddleware<CustomExceptionMiddleware>();
 
 // use static files for images if you save images in static files 
-app.UseStaticFiles(new StaticFileOptions() {
+app.UseStaticFiles(new StaticFileOptions()
+{
     //fileprovider= new physicalfileprovider("physicalfileprovider in your local machine "); 
     //so we have aproblem with this because we work as a team and in git
     // so all physical files will not be in the same path
@@ -116,7 +123,7 @@ app.UseStaticFiles(new StaticFileOptions() {
     RequestPath = "/images"
 });
 
-app.UseStaticFiles(); 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

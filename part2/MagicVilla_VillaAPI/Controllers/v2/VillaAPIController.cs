@@ -120,7 +120,7 @@ namespace MagicVilla_VillaAPI.Controllers.v2
         {
             try
             {
-                
+
                 if (await _dbVilla.GetAsync(u => u.Name.ToLower() == createDTO.Name.ToLower()) != null)
                 {
                     ModelState.AddModelError("ErrorMessages", "Villa already Exists!");
@@ -131,14 +131,15 @@ namespace MagicVilla_VillaAPI.Controllers.v2
                 {
                     return BadRequest(createDTO);
                 }
-                
+
                 Villa villa = _mapper.Map<Villa>(createDTO);
 
-                
+
                 await _dbVilla.CreateAsync(villa);
 
                 if (createDTO.Image != null)
                 {
+                    // i can also give image name for giud.Newguid(); but better give id for villa 
                     string fileName = villa.Id + Path.GetExtension(createDTO.Image.FileName);
                     string filePath = @"wwwroot\ProductImage\" + fileName;
 
@@ -157,7 +158,7 @@ namespace MagicVilla_VillaAPI.Controllers.v2
                     }
 
                     var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.Value}{HttpContext.Request.PathBase.Value}";
-                    villa.ImageUrl = baseUrl+ "/ProductImage/"+fileName;
+                    villa.ImageUrl = baseUrl + "/ProductImage/" + fileName;
                     villa.ImageLocalPath = filePath;
 
                 }

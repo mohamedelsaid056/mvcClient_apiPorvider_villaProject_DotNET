@@ -9,7 +9,7 @@
             PUT,
             DELETE
         }
-        public static string AccessToken = "JWTToken";
+        public static string AccessToken = "JWTToken"; //session  token 
         public static string RefreshToken = "RefreshToken";
         public static string CurrentAPIVersion = "v2";// to make dynamic version of API in url 
         public const string Admin = "admin";
@@ -17,7 +17,7 @@
         public enum ContentType
         {
             Json,
-            MultipartFormData,
+            MultipartFormData,// if i have image in request data i need to  replace application/json with multipart/form-data in the header 
         }
     }
 }
