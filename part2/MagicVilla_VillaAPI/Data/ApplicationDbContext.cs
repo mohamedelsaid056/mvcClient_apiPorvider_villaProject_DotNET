@@ -32,7 +32,7 @@ namespace MagicVilla_VillaAPI.Data
                     Rate = 200,
                     Sqft = 550,
                     Amenity = "",
-                    CreatedDate = new DateTime(2000, 01, 01) 
+                    CreatedDate = new DateTime(2000, 01, 01)
                 },
               new Villa
               {
