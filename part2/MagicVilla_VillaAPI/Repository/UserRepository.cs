@@ -115,11 +115,11 @@ namespace MagicVilla_VillaAPI.Repository
                     new Claim(ClaimTypes.Role, roles.FirstOrDefault()),
                     new Claim(JwtRegisteredClaimNames.Jti, jwtTokenId),
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-                    new Claim(JwtRegisteredClaimNames.Aud, "dotnetmastery.com")
+                    new Claim(JwtRegisteredClaimNames.Aud, "mohamedweb.com")
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(1),
-                Issuer = "https://magicvilla-api.com",
-                Audience = "https://test-magic-api.com",
+                Issuer = "https://magicvilla-api.com",// this when we work in microservice and  we need to some configuration information in program.cs
+                Audience = "https://test-magic-api.com",// this when we work in microservice  
                 SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -127,6 +127,8 @@ namespace MagicVilla_VillaAPI.Repository
             var tokenStr = tokenHandler.WriteToken(token);
             return tokenStr;
         }
+
+
         // this is a private method to generate JWT refresh token 
         public async Task<TokenDTO> RefreshAccessToken(TokenDTO tokenDTO)
         {

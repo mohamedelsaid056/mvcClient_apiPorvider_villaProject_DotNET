@@ -129,8 +129,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-ApplyMigration();
+ApplyMigration(); // call function of auto Migration for bending migration  
 app.Run();
+
+// for automatic migrations  no need for write commands update-database
 
 void ApplyMigration()
 {
