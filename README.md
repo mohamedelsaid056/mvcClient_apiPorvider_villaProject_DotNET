@@ -1,6 +1,13 @@
+
+
 # MagicVilla API & Web Application
+Hi Friends,
 
 MagicVilla is a full-stack application consisting of a RESTful API (MagicVilla_VillaAPI) and a web client (MagicVilla_Web) for managing villa properties and bookings.
+
+Demo Link:- https://magicvilla-dnm.azurewebsites.net/
+
+Git Link:- https://github.com/mohamedelsaid056/mvcClient_apiPorvider_villaProject_DotNET
 
 ## Features
 
@@ -17,20 +24,20 @@ MagicVilla is a full-stack application consisting of a RESTful API (MagicVilla_V
 ## Technology Stack
 
 - **Backend:**
-  - ASP.NET Core 6.0+
+  - ASP.NET API 7.0+
   - Entity Framework Core
   - SQL Server
   - AutoMapper
   - JWT Bearer Authentication
   
 - **Frontend:**
-  - ASP.NET Core MVC
-  - Bootstrap
+  - ASP.NET  MVC
+  - Bootstrap 5
   - JavaScript
 
 ## Prerequisites
 
-- .NET 6.0 SDK or later
+- .NET 7.0 SDK or later
 - SQL Server
 - Visual Studio 2022 or VS Code
 
@@ -38,7 +45,7 @@ MagicVilla is a full-stack application consisting of a RESTful API (MagicVilla_V
 
 1. **Clone the repository**
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/mohamedelsaid056/mvcClient_apiPorvider_villaProject_DotNET
    ```
 
 2. **Update Connection String**
@@ -57,7 +64,7 @@ MagicVilla is a full-stack application consisting of a RESTful API (MagicVilla_V
    - Then start the Web project
    - API Swagger documentation will be available at: `https://localhost:[port]/`
 
-## Project Structure
+## How Project is structured 
 
 - **MagicVilla_VillaAPI/**
   - RESTful API implementation
@@ -71,6 +78,23 @@ MagicVilla is a full-stack application consisting of a RESTful API (MagicVilla_V
   - Service Pattern for API Consumption
   - Cookie Authentication
   - Exception Handling
+
+ Below, I have Pasted the high level glimpse project structure.
+ 
+ ![14th](https://github.com/user-attachments/assets/76253e1f-4860-4ced-8dc9-11338610ff10)
+
+ APIs Structure goes like
+
+ ![16th](https://github.com/user-attachments/assets/28a393f9-f798-4aa8-8ae3-9ee0a52ccdc1)
+
+ Here, you will get Custom middleware implementation, extension methods, DTOs, Custom Error Handling and few Helper methods as well.
+
+ MVC asp .NET Project as consumer for API  looks like 
+
+ ![16th](https://github.com/user-attachments/assets/adc05230-30d7-484b-9eb8-f79f90954114)
+
+ 
+  
 
 ## API Endpoints
 
