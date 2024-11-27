@@ -104,6 +104,27 @@ The API supports two versions (v1 and v2) with the following main endpoints:
 - `/api/v{version}/VillaNumberAPI` - Villa number management
 - `/api/v{version}/UsersAuth` - Authentication endpoints
 
+
+
+ ## NuGet Paackage In Backend 
+####  ORM
+install-package Microsoft.EntityFrameworkCore.Sqlite  
+install-package Microsoft.EntityFrameworkCore  
+install-package Microsoft.EntityFrameworkCore.Design  
+
+#### Identity 
+install-package microsoft.aspnetcore.identity.EntityFrameworkCore  
+install-package microsoft.aspnetcore.identity  
+install-package microsoft.identitymodel.tokens  
+install-package System.IdentityModel.Tokens.Jwt 
+
+## Store Data   
+using **SQLite** for **Development** enviroment and **Production** also 
+
+
+
+
+
 ## Authentication
 
 - **API:** Uses JWT Bearer token authentication
@@ -125,20 +146,97 @@ Key configuration options are available in `appsettings.json`:
 - Logging support
 - Custom error pages
 
-## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Glimpse of the working solution
 
-## License
+Demo Link:- https://magicvilla-dnm.azurewebsites.net/
 
-[Your chosen license]
+![1st](https://github.com/user-attachments/assets/ae643a10-0091-4d07-a8b7-8676b8fc30f8)
 
-## Acknowledgments
+![2st](https://github.com/user-attachments/assets/ad3a1ec5-2bd2-4186-915c-f36730d6acbd)
 
-- Built following best practices and design patterns
-- Implements secure authentication and authorization
-- Includes comprehensive API documentation
+![3st](https://github.com/user-attachments/assets/aca66f74-91c4-4f2d-a123-d9cc237fd910)
+
+![4st](https://github.com/user-attachments/assets/8417cb5a-8361-4564-bf53-eaea4916fe04)
+
+![5st](https://github.com/user-attachments/assets/3d8ce636-05ae-4a50-8ea1-696ed2f9c8c3)
+
+![6st](https://github.com/user-attachments/assets/7873ec03-de40-46d8-aa1a-5546fc3aa0c8)
+
+## Running the project
+
+## Running the Project
+
+### Prerequisites Setup
+
+1. **Database Configuration**
+   - Open `appsettings.json` in `MagicVilla_VillaAPI` project
+   - Update the `DefaultSQLConnection` string to your SQL Server instance:
+     ```json
+     "ConnectionStrings": {
+       "DefaultSQLConnection": "Server=YOUR_SERVER;Database=MagicVilla;Trusted_Connection=True;MultipleActiveResultSets=true"
+     }
+     ```
+
+2. **JWT Configuration**
+   - In `MagicVilla_VillaAPI/appsettings.json`, ensure the JWT secret key is set:
+     ```json
+     "ApiSettings": {
+       "Secret": "YOUR_SECRET_KEY"
+     }
+     ```
+
+### Starting the Projects
+
+1. **Start the API Project First**
+   ```bash
+   cd MagicVilla_VillaAPI
+   dotnet run
+   ```
+   The API will:
+   - Automatically apply any pending migrations
+   - Start the Swagger UI at `https://localhost:4200/`
+   - Set up static file handling for images in the `/images` directory
+   - Enable JWT authentication
+
+2. **Start the Web Project**
+   ```bash
+   cd MagicVilla_Web
+   dotnet run
+   ```
+   The Web application will:
+   - Start with cookie-based authentication
+   - Session timeout set to 30 minutes
+   - Redirect to `/Auth/Login` for unauthorized access
+
+### Available Features
+
+- **API Documentation:** Access Swagger UI at the root URL
+  - Version 1: `/swagger/v1/swagger.json`
+  - Version 2: `/swagger/v2/swagger.json`
+
+- **Authentication:**
+  - API uses JWT Bearer tokens
+  - Web client uses cookie authentication
+  - Login path: `/Auth/Login`
+  - Access denied path: `/Auth/AccessDenied`
+
+- **Static Files:**
+  - Images are served from the `/images` directory in the API project
+  - Access images via: `https://localhost:4200/images/[filename]`
+
+### Development vs Production
+
+- **Development Environment:**
+  - Detailed error messages
+  - Swagger UI available at `/swagger`
+  - Exception handling with detailed information
+
+- **Production Environment:**
+  - Swagger UI available at root URL
+  - HSTS enabled
+  - Custom error handling middleware
+  - Secure static file serving
+
+
+
