@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xk54NVGPxBA=",
+  "dgSpecHash": "F3/39xNNkag=",
   "success": true,
-  "projectFilePath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj",
+  "projectFilePath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohamed\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Mohamed\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -26,6 +26,16 @@
     "C:\\Users\\Mohamed\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.30.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
     {
       "code": "NU1902",
       "level": "Warning",

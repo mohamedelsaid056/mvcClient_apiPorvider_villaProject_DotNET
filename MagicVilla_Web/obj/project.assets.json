@@ -963,11 +963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj",
+      "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj",
       "projectName": "MagicVilla_Web",
-      "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj",
+      "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj",
       "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-      "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\obj\\",
+      "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -988,8 +988,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
-              "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj"
+            "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
+              "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj"
             }
           }
         }
@@ -1002,8 +1002,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1045,11 +1046,21 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 6.30.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
     {
       "code": "NU1902",
       "level": "Warning",

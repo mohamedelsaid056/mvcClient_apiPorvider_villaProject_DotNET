@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj": {}
+    "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj": {}
   },
   "projects": {
-    "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
+    "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj",
+        "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj",
         "projectName": "MagicVilla_Utility",
-        "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj",
+        "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\obj\\",
+        "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -42,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -64,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj": {
+    "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj",
+        "projectUniqueName": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj",
         "projectName": "MagicVilla_Web",
-        "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\MagicVilla_Web.csproj",
+        "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\MagicVilla_Web.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Web\\obj\\",
+        "outputPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
-                "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\MagicVilla_Utility\\MagicVilla_Utility.csproj"
+              "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj": {
+                "projectPath": "E:\\try_programming\\3 finial project for cv\\magic villa\\mvcClient_apiPorvider_villaProject_DotNET\\MagicVilla_Utility\\MagicVilla_Utility.csproj"
               }
             }
           }
@@ -110,8 +111,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -153,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
